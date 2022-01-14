@@ -12,13 +12,14 @@ public class s4t6 {
             System.out.println("Назовите числа");
             Numbers[i] = in.nextInt();
         }
-        int temp = Numbers[0];
-        Numbers[0] = Numbers[Numbers.length - 1];
-        Numbers[Numbers.length - 1] = temp;
+        if (Numbers[Numbers.length - 1] < Numbers[0]) {
+            int temp = Numbers[0];
+            Numbers[0] = Numbers[Numbers.length - 1];
+            Numbers[Numbers.length - 1] = temp;
+        }
         for (int i = 0; i < Numbers.length; i++) {
-            if (Numbers[Numbers.length-1]<Numbers[0])
-                System.out.println(Numbers[i]);
-                in.close();
-            }
+            System.out.println(Numbers[i]);
+            in.close();
         }
     }
+}
